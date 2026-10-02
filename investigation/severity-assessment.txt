@@ -1,0 +1,53 @@
+PHISHING EMAIL - SEVERITY ASSESSMENT
+====================================
+
+Severity:
+HIGH
+
+RATIONALE
+---------
+
+The email contains multiple indicators associated with a phishing
+attempt:
+
+1. Lookalike sender domain
+2. Urgent account-suspension language
+3. Suspicious account-verification URL
+4. SPF authentication failure
+5. DKIM authentication failure
+6. DMARC authentication failure
+
+The combination of these indicators creates a credible risk that
+a recipient could be persuaded to interact with the suspicious
+link.
+
+LIMITATIONS
+-----------
+
+There is currently no evidence in this simulated incident that:
+
+- The recipient clicked the URL
+- Credentials were submitted
+- Malware was downloaded
+- An account was compromised
+- Data was accessed or exfiltrated
+
+Therefore, the severity assessment reflects the risk presented
+by the phishing email and not confirmed account compromise.
+
+SOC PRIORITY
+------------
+
+The alert should be investigated promptly.
+
+Recommended immediate actions include:
+
+- Prevent users from interacting with the URL
+- Identify whether other users received the same email
+- Search email logs for the sender/domain/URL
+- Quarantine or remove the message if present
+- Report/block the suspicious indicators according to
+  organisational procedures
+- Check whether any recipient clicked the link
+- If a user interacted with the link, investigate for possible
+  credential compromise

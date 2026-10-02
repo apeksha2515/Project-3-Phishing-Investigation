@@ -1,0 +1,40 @@
+PHISHING EMAIL - IOC EXTRACTION
+================================
+
+IOC 1
+Type: Email Address
+Value: security@micros0ft-security.example
+Reason: Sender uses a lookalike domain containing "micros0ft".
+
+IOC 2
+Type: Domain
+Value: micros0ft-security.example
+Reason: Lookalike spelling uses the number "0" instead of the letter "o".
+
+IOC 3
+Type: URL
+Value: https://login-microsoft-security.example/verify
+Reason: Suspicious account-verification URL used in the email.
+
+IOC 4
+Type: IP Address
+Value: 198.51.100.24
+Reason: Source IP shown in the simulated email headers. This is a documentation/example IP used for this lab and is not being treated as a real malicious IP.
+
+EMAIL AUTHENTICATION
+====================
+
+SPF: FAIL
+DKIM: FAIL
+DMARC: FAIL
+
+INITIAL ASSESSMENT
+==================
+
+The email contains multiple phishing indicators:
+- Lookalike sender/domain
+- Urgent account-suspension language
+- Suspicious verification URL
+- SPF failure
+- DKIM failure
+- DMARC failure

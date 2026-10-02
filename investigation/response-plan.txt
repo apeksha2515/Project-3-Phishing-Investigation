@@ -1,0 +1,130 @@
+SOC RESPONSE AND CONTAINMENT PLAN
+=================================
+
+INCIDENT TYPE
+-------------
+Suspected Phishing Email
+
+SEVERITY
+--------
+High
+
+1. IMMEDIATE ACTIONS
+--------------------
+
+- Do not click the suspicious URL.
+- Do not reply to the sender.
+- Preserve the original email and its headers as evidence.
+- Quarantine or remove the email according to organisational procedures.
+- Identify all users who received the same or similar message.
+- Search email security logs for the sender domain, URL, and related messages.
+- Check whether any recipient clicked the suspicious URL.
+- If a user entered credentials, initiate the organisation's credential-compromise response process.
+- Report or escalate the incident to the appropriate SOC/incident response team.
+
+2. INDICATOR HANDLING
+---------------------
+
+Indicators identified during the investigation:
+
+Sender:
+security@micros0ft-security.example
+
+Domain:
+micros0ft-security.example
+
+URL:
+https://login-microsoft-security.example/verify
+
+Source IP:
+198.51.100.24
+
+The indicators should be blocked or monitored according to the organisation's security procedures.
+
+The IP address is a documentation/example IP used only for this simulation and should not be treated as a real malicious IP.
+
+3. CONTAINMENT
+--------------
+
+Potential containment actions include:
+
+- Quarantine matching phishing emails.
+- Prevent delivery of additional messages containing the same indicators.
+- Block the suspicious domain or URL through approved security controls where appropriate.
+- Identify additional affected recipients.
+- Determine whether any user interacted with the message.
+- Review authentication and endpoint logs for suspicious activity.
+
+4. CREDENTIAL COMPROMISE RESPONSE
+---------------------------------
+
+If a recipient entered credentials into a suspicious website:
+
+- Reset the affected account password.
+- Revoke active sessions where organisational procedures allow.
+- Review recent authentication activity.
+- Check for suspicious MFA changes or new authentication methods.
+- Investigate unusual account activity.
+- Escalate the incident if evidence of compromise is identified.
+
+These actions are only part of a simulated response plan and were not performed against any real account.
+
+5. ERADICATION AND REMEDIATION
+------------------------------
+
+- Remove remaining copies of the phishing email.
+- Block or monitor identified indicators.
+- Search for related phishing messages.
+- Review security controls that detected or missed the email.
+- Update detection rules if required.
+- Document the investigation and actions taken.
+
+6. RECOVERY
+-----------
+
+- Confirm that affected accounts are secure.
+- Monitor authentication activity for further suspicious behaviour.
+- Confirm that malicious messages have been removed.
+- Continue monitoring for related indicators.
+- Close the incident only after the investigation and required remediation are complete.
+
+7. LESSONS LEARNED
+------------------
+
+The investigation demonstrates several useful phishing detection indicators:
+
+- Lookalike domains
+- Urgent account-suspension language
+- Suspicious verification URLs
+- SPF failure
+- DKIM failure
+- DMARC failure
+
+Future detection improvements could include:
+
+- Email rules for lookalike domains.
+- Detection of repeated authentication failures in email headers.
+- URL reputation and domain-age checks.
+- User awareness training.
+- Improved phishing-reporting procedures.
+- SIEM correlation of email and authentication events.
+
+8. SIMULATION LIMITATIONS
+-------------------------
+
+This project is a controlled phishing investigation simulation.
+
+No real phishing email was sent.
+No suspicious URL was opened.
+No credentials were entered.
+No real user account was accessed.
+No real domain or IP address was blocked.
+
+The indicators use documentation/example values where appropriate.
+
+SOC ANALYST CONCLUSION
+----------------------
+
+The email should be treated as a high-priority suspected phishing message because it contains multiple indicators of malicious intent, including a lookalike sender domain, urgent account-suspension language, a suspicious verification URL, and failed SPF, DKIM, and DMARC checks.
+
+The appropriate SOC response is to preserve evidence, contain the message, identify potentially affected users, investigate whether anyone interacted with the email, and escalate any evidence of credential compromise or account takeover.

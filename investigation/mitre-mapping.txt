@@ -1,0 +1,49 @@
+PHISHING EMAIL - MITRE ATT&CK MAPPING
+======================================
+
+Technique:
+T1566 - Phishing
+
+Sub-technique:
+T1566.002 - Phishing: Spearphishing Link
+
+
+OBSERVED BEHAVIOUR
+------------------
+
+The simulated email contains a link directing the recipient to
+a supposed Microsoft account verification page.
+
+The message uses urgent account-suspension language to encourage
+the recipient to follow the link.
+
+
+EVIDENCE
+--------
+
+Suspicious URL:
+https://login-microsoft-security.example/verify
+
+Subject:
+URGENT: Your Microsoft 365 account will be suspended
+
+Email authentication:
+SPF: FAIL
+DKIM: FAIL
+DMARC: FAIL
+
+
+RATIONALE
+---------
+
+T1566.002 is an appropriate mapping because the simulated
+phishing scenario attempts to persuade the recipient to interact
+with a suspicious link delivered through email.
+
+
+ANALYST NOTE
+------------
+
+This is a mapping of simulated behaviour to the MITRE ATT&CK
+framework. It does not represent evidence of a real-world
+attacker or campaign.

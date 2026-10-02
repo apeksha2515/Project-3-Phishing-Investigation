@@ -1,0 +1,88 @@
+PHISHING EMAIL - THREAT INTELLIGENCE ASSESSMENT
+================================================
+
+Purpose
+-------
+
+Threat intelligence is used by SOC analysts to determine whether
+an IOC has previously been associated with malicious activity.
+
+
+IOC 1 - Domain
+--------------
+
+Value:
+micros0ft-security.example
+
+Assessment:
+This is a simulated example domain created specifically for this
+security lab.
+
+No real-world malicious reputation is being claimed.
+
+
+IOC 2 - URL
+-----------
+
+Value:
+https://login-microsoft-security.example/verify
+
+Assessment:
+This is a simulated URL using the reserved .example domain.
+
+The URL should not be treated as a real malicious website.
+
+
+IOC 3 - IP Address
+------------------
+
+Value:
+198.51.100.24
+
+Assessment:
+This IP address belongs to the documentation/example address
+space used for examples and testing.
+
+It is included in this project to simulate an email source IP.
+
+No real malicious reputation is being claimed.
+
+
+REAL SOC WORKFLOW
+=================
+
+For a real phishing incident, a SOC analyst could investigate
+the extracted indicators using approved threat-intelligence
+sources.
+
+Possible checks include:
+
+- Domain reputation
+- IP reputation
+- URL reputation
+- WHOIS/domain registration information
+- Passive DNS information
+- Malware or phishing reports
+- Previous internal security alerts
+- Vendor threat-intelligence reports
+
+The analyst should record the source, date checked, result and
+confidence level.
+
+Analysts should not automatically classify an IOC as malicious
+without sufficient supporting evidence.
+
+
+THREAT INTELLIGENCE CONCLUSION
+==============================
+
+The simulated indicators cannot provide a genuine real-world
+reputation verdict.
+
+However, the email already contains several independent phishing
+indicators, including a lookalike sender domain, urgent
+social-engineering language, a suspicious verification URL and
+failed email authentication checks.
+
+Further investigation would be appropriate in a real SOC
+environment.

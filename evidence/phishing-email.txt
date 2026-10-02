@@ -1,0 +1,41 @@
+From: Microsoft 365 Security <security@micros0ft-security.example>
+To: employee@company.example
+Subject: URGENT: Your Microsoft 365 account will be suspended
+Date: Thu, 24 Sep 2026 09:17:22 +0000
+Message-ID: <20260924091722.84721@mx01.micros0ft-security.example>
+Reply-To: security-help@micros0ft-security.example
+Return-Path: <bounce@micros0ft-security.example>
+
+Received: from mail.micros0ft-security.example
+    (mail.micros0ft-security.example [198.51.100.24])
+    by mail.company.example
+    with ESMTPS id A82F17
+    for <employee@company.example>;
+    Thu, 24 Sep 2026 09:17:25 +0000
+
+Authentication-Results: mail.company.example;
+    spf=fail smtp.mailfrom=micros0ft-security.example;
+    dkim=fail header.d=micros0ft-security.example;
+    dmarc=fail header.from=micros0ft-security.example
+
+Content-Type: text/html
+
+------------------------------------------------------------
+EMAIL BODY
+------------------------------------------------------------
+
+Microsoft 365 Security Alert
+
+We detected unusual activity on your Microsoft 365 account.
+
+Your account will be suspended within 24 hours unless you
+complete the required security verification.
+
+Verify your account here:
+
+https://login-microsoft-security.example/verify
+
+Failure to complete verification may result in loss of access
+to your Microsoft 365 account.
+
+Microsoft 365 Security Team

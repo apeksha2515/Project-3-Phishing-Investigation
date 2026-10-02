@@ -1,0 +1,122 @@
+PHISHING EMAIL - HEADER ANALYSIS
+================================
+
+1. FROM HEADER
+--------------
+From: Microsoft 365 Security <security@micros0ft-security.example>
+
+Observation:
+The sender claims to represent Microsoft 365 Security. However, the
+domain "micros0ft-security.example" uses a lookalike spelling where
+the number "0" replaces the letter "o".
+
+Assessment:
+This is a phishing indicator because the sender identity appears
+designed to resemble a legitimate organisation.
+
+
+2. REPLY-TO HEADER
+------------------
+Reply-To: security-help@micros0ft-security.example
+
+Observation:
+The Reply-To address uses the same suspicious lookalike domain as
+the From address.
+
+Assessment:
+The Reply-To address does not provide evidence that the message
+originated from a legitimate Microsoft service.
+
+
+3. RETURN-PATH HEADER
+---------------------
+Return-Path: bounce@micros0ft-security.example
+
+Observation:
+The Return-Path also uses the suspicious lookalike domain.
+
+Assessment:
+The envelope sender is consistent with the suspicious domain and
+does not establish legitimate Microsoft ownership.
+
+
+4. RECEIVED HEADER
+------------------
+Received:
+from mail.micros0ft-security.example
+(mail.micros0ft-security.example [198.51.100.24])
+by mail.company.example
+
+Observation:
+The message claims to have been received from a server associated
+with the suspicious lookalike domain.
+
+The IP address 198.51.100.24 is part of a documentation/example
+range and is being used safely for this simulated investigation.
+
+
+5. SPF
+-------
+Result: FAIL
+
+SPF (Sender Policy Framework) checks whether the sending server is
+authorised to send email for the domain.
+
+Observation:
+The simulated message failed SPF authentication.
+
+Assessment:
+This is a significant indicator that the sending infrastructure
+was not authorised according to the simulated domain's SPF policy.
+
+
+6. DKIM
+--------
+Result: FAIL
+
+DKIM (DomainKeys Identified Mail) uses a cryptographic signature
+to help verify that an email was authorised by the sending domain
+and that the signed content was not altered.
+
+Observation:
+The simulated message failed DKIM authentication.
+
+Assessment:
+The message does not have a valid DKIM authentication result.
+
+
+7. DMARC
+---------
+Result: FAIL
+
+DMARC (Domain-based Message Authentication, Reporting and
+Conformance) helps protect domains from email impersonation by
+checking authentication and alignment.
+
+Observation:
+The simulated message failed DMARC.
+
+Assessment:
+The message failed the simulated domain's email authentication
+requirements.
+
+
+OVERALL HEADER ASSESSMENT
+=========================
+
+The headers contain multiple indicators associated with phishing:
+
+- Lookalike sender domain
+- Suspicious Reply-To domain
+- Suspicious Return-Path domain
+- SPF failure
+- DKIM failure
+- DMARC failure
+
+These findings should be considered together with the suspicious
+subject, urgent language and verification URL in the email body.
+
+Conclusion:
+The simulated email should be treated as a suspected phishing
+message and escalated for further investigation rather than
+trusted or interacted with.

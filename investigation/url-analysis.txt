@@ -1,0 +1,70 @@
+PHISHING EMAIL - URL ANALYSIS
+=============================
+
+Suspicious URL:
+https://login-microsoft-security.example/verify
+
+
+1. PROTOCOL
+-----------
+
+Value:
+https://
+
+Observation:
+The URL uses HTTPS.
+
+Assessment:
+HTTPS provides encrypted communication but does not prove that
+the destination is legitimate or trustworthy.
+
+
+2. DOMAIN
+---------
+
+Value:
+login-microsoft-security.example
+
+Observation:
+The domain contains the words "login", "microsoft" and "security",
+which may make the destination appear legitimate.
+
+The domain is not a Microsoft-owned domain in this simulation.
+
+Assessment:
+The domain is suspicious because it attempts to resemble a
+legitimate Microsoft account/security service.
+
+
+3. PATH
+--------
+
+Value:
+/verify
+
+Observation:
+The path suggests an account verification action.
+
+Assessment:
+This is consistent with the social-engineering message in the
+email, which pressures the recipient to verify their account.
+
+
+4. SAFETY
+---------
+
+The URL was not opened or visited.
+
+It was analysed as text only to avoid interacting with a
+potentially malicious destination.
+
+
+URL ASSESSMENT
+==============
+
+The URL is a phishing indicator because it uses a lookalike
+domain and presents an account-verification path in the context
+of an urgent account-suspension message.
+
+The URL should be treated as suspicious and should not be opened
+by the recipient.
